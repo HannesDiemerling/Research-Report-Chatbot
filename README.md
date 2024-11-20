@@ -35,8 +35,8 @@ Follow these steps to set up and run the MPIB Chatbot on your local machine.
    It's recommended to use a virtual environment to manage dependencies. Run the following commands:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
 4. **Install Dependencies**
@@ -44,8 +44,7 @@ Follow these steps to set up and run the MPIB Chatbot on your local machine.
    Install the required Python packages using pip:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   pip install -r requirements.txt
    ```
 
 6. **Create a .env File**
@@ -53,8 +52,7 @@ Follow these steps to set up and run the MPIB Chatbot on your local machine.
    Create a .env file in the root directory of the project and add your OpenAI API key:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   OPENAI_API_KEY=your_openai_api_key_here
    ```
 
 ### Running the Application
