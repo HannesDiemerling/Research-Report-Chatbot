@@ -1,0 +1,71 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>MPIB Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .chatbox {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .input-area {
+            display: flex;
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 0 20px;
+            font-size: 16px;
+        }
+        .conversation {
+            margin-top: 20px;
+        }
+        .user, .bot {
+            margin-bottom: 20px;
+        }
+        .user p, .bot p {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+        }
+        .user p {
+            background-color: #d1e7dd;
+        }
+        .bot p {
+            background-color: #efe1e1;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbox">
+        <h1>MPIB Chatbot</h1>
+        <form method="post" class="input-area">
+            <input type="text" name="user_input" placeholder="Geben Sie Ihre Frage ein" required>
+            <button type="submit">Senden</button>
+        </form>
+        {% if user_input %}
+        <div class="conversation">
+            <div class="user">
+                <strong>Sie:</strong>
+                <p>{{ user_input }}</p>
+            </div>
+            <div class="bot">
+                <strong>Chatbot:</strong>
+                <p>{{ response }}</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
