@@ -23,11 +23,12 @@ Follow these steps to set up and run the MPIB Chatbot on your local machine.
 
 1. **Clone the Repository**
 
-   Open your terminal and run the following command to clone the repository:
+   Open your terminal and run the following command to clone the repository (You need to change the dummy path to your path):
 
    ```bash
+   cd path/to/your/directory
    git clone https://github.com/HannesDiemerling/Research-Report-Chatbot.git
-   cd <repository-directory>
+   cd Research-Report-Chatbot
    ```
    
 2. **Set Up Python Environment**
